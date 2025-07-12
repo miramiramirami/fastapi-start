@@ -1,6 +1,7 @@
 
 [tool.poetry]
 name = "fastapi-application"
+version = "0.1.0"
 packages = [
     { include = "fastapi-application" }  # Указываем пакет для импорта
 ]
@@ -10,3 +11,4 @@ python = "^3.8"
 fastapi = "^0.109.0"
 uvicorn = "^0.27.0"
 pydantic = "^2.6.0"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.41"}
