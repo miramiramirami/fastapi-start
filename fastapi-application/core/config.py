@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 
 
 class RunConfig(BaseModel):
-    host: str = '0.0.0.0' 
+    host: str = '0.0.0.0'
     port: int = 8080
 
 class ApiPrefix(BaseModel):
@@ -21,6 +21,6 @@ class DataBaseConfig(BaseModel):
 class Settings(BaseSettings):
     run: RunConfig = RunConfig()
     api: ApiPrefix = ApiPrefix()
-    db: DataBaseConfig
+    db: DataBaseConfig = DataBaseConfig()
 
 settings = Settings()
